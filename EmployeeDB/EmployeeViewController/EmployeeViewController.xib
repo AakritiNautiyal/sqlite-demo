@@ -9,8 +9,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddEmployeeVC" customModule="EmployeeDB" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmployeeViewController" customModule="EmployeeDB" customModuleProvider="target">
             <connections>
+                <outlet property="createEmployeeButton" destination="ptO-Ao-fmc" id="lO9-yl-S1K"/>
+                <outlet property="deleteButton" destination="Z22-Oe-NY2" id="nz4-yc-mtP"/>
+                <outlet property="empAddressTextField" destination="Xs0-73-jii" id="U2h-bj-bB4"/>
+                <outlet property="empCodeTextField" destination="8xI-1t-bOi" id="Ch3-0w-xGh"/>
+                <outlet property="empContactNoTextField" destination="T0j-Dt-vEs" id="idg-OO-2Rs"/>
+                <outlet property="empEmailTextField" destination="ctn-Qz-qe3" id="bz2-CW-Ek5"/>
+                <outlet property="empNameTextField" destination="CTO-Jo-sE1" id="QsB-6T-F9o"/>
+                <outlet property="empTechnologyTextField" destination="WUX-mB-Wgt" id="EdQ-en-bzB"/>
+                <outlet property="headerLabel" destination="pz2-5F-jRH" id="z9W-5u-hGG"/>
+                <outlet property="mainScrollView" destination="2ta-9c-lrk" id="ZNj-Kw-ly0"/>
+                <outlet property="updateDeleteStackView" destination="nbL-YM-pNb" id="rsO-uk-ciE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -75,6 +86,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="2rK-D6-6ha"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sms-wP-mD9">
                                             <rect key="frame" x="0.0" y="94" width="374" height="18"/>
@@ -89,6 +103,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="Eww-aU-yD7"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bij-wB-VDJ">
                                             <rect key="frame" x="0.0" y="188" width="374" height="18"/>
@@ -103,6 +120,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="SvG-nv-KV2"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-ls-mOW">
                                             <rect key="frame" x="0.0" y="282" width="374" height="18"/>
@@ -117,6 +137,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="7xC-L3-ESO"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpw-VZ-Udj">
                                             <rect key="frame" x="0.0" y="376" width="374" height="18"/>
@@ -131,6 +154,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="5J5-V5-v7Y"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-Yt-XXa">
                                             <rect key="frame" x="0.0" y="470" width="374" height="18"/>
@@ -145,6 +171,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="GqE-5z-7PK"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                 </stackView>
@@ -166,15 +195,60 @@
                                         <action selector="saveDetails:" destination="-1" eventType="touchUpInside" id="4do-Qe-mo2"/>
                                     </connections>
                                 </button>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-YM-pNb">
+                                    <rect key="frame" x="20" y="616" width="374" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-UR-OeI">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
+                                            <color key="backgroundColor" red="0.67489493369999998" green="0.068148365089999996" blue="0.31307311450000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Pbz-1l-NZ9"/>
+                                            </constraints>
+                                            <state key="normal" title="Update Details">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="updateDEtails:" destination="-1" eventType="touchUpInside" id="BCs-yE-LTz"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z22-Oe-NY2">
+                                            <rect key="frame" x="192" y="0.0" width="182" height="40"/>
+                                            <color key="backgroundColor" red="0.67489493369999998" green="0.068148365089999996" blue="0.31307311450000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="YNH-Mj-gqt"/>
+                                            </constraints>
+                                            <state key="normal" title="Delete Employee">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="deleteEmployee:" destination="-1" eventType="touchUpInside" id="Z10-Jb-Nhy"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="nbL-YM-pNb" firstAttribute="trailing" secondItem="ptO-Ao-fmc" secondAttribute="trailing" id="1jn-iK-5YX"/>
                                 <constraint firstItem="dpB-hx-zaz" firstAttribute="top" secondItem="CgQ-FV-inb" secondAttribute="top" constant="30" id="AkL-6a-UIB"/>
                                 <constraint firstAttribute="trailing" secondItem="dpB-hx-zaz" secondAttribute="trailing" constant="20" id="Jlg-7L-ZLY"/>
+                                <constraint firstItem="nbL-YM-pNb" firstAttribute="leading" secondItem="ptO-Ao-fmc" secondAttribute="leading" id="Qpr-Yc-TFn"/>
+                                <constraint firstItem="nbL-YM-pNb" firstAttribute="top" secondItem="ptO-Ao-fmc" secondAttribute="top" id="TbG-Qg-is6"/>
                                 <constraint firstAttribute="trailing" secondItem="ptO-Ao-fmc" secondAttribute="trailing" constant="20" id="Tv3-yl-4FW"/>
                                 <constraint firstItem="dpB-hx-zaz" firstAttribute="leading" secondItem="CgQ-FV-inb" secondAttribute="leading" constant="20" id="UTf-PA-4AU"/>
                                 <constraint firstItem="ptO-Ao-fmc" firstAttribute="leading" secondItem="CgQ-FV-inb" secondAttribute="leading" constant="20" id="Uyc-AF-5g7"/>
                                 <constraint firstItem="ptO-Ao-fmc" firstAttribute="top" secondItem="dpB-hx-zaz" secondAttribute="bottom" constant="40" id="aO0-0U-5Ak"/>
+                                <constraint firstItem="nbL-YM-pNb" firstAttribute="bottom" secondItem="ptO-Ao-fmc" secondAttribute="bottom" id="iva-yI-DUd"/>
                                 <constraint firstAttribute="bottom" secondItem="ptO-Ao-fmc" secondAttribute="bottom" constant="40" id="x44-yo-FHG"/>
                             </constraints>
                         </view>

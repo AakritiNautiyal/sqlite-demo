@@ -15,9 +15,15 @@
 		DD62F4082823B9C700BE1FC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD62F4062823B9C700BE1FC1 /* LaunchScreen.storyboard */; };
 		DD62F4132823B9C800BE1FC1 /* EmployeeDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F4122823B9C800BE1FC1 /* EmployeeDBTests.swift */; };
 		DD62F41E2823B9C800BE1FC1 /* EmployeeDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F41D2823B9C800BE1FC1 /* EmployeeDBUITests.swift */; };
-		DD62F46E2823CE6A00BE1FC1 /* AddEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F46C2823CE6A00BE1FC1 /* AddEmployeeVC.swift */; };
-		DD62F46F2823CE6A00BE1FC1 /* AddEmployeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD62F46D2823CE6A00BE1FC1 /* AddEmployeeVC.xib */; };
+		DD62F46E2823CE6A00BE1FC1 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F46C2823CE6A00BE1FC1 /* EmployeeViewController.swift */; };
+		DD62F46F2823CE6A00BE1FC1 /* EmployeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD62F46D2823CE6A00BE1FC1 /* EmployeeViewController.xib */; };
 		DD62F4732823D4BE00BE1FC1 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F4722823D4BE00BE1FC1 /* Employee.swift */; };
+		DD62F4762823E30F00BE1FC1 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F4752823E30F00BE1FC1 /* DBManager.swift */; };
+		DD62F47B2824E61C00BE1FC1 /* EmployeesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F4792824E61C00BE1FC1 /* EmployeesListVC.swift */; };
+		DD62F47C2824E61C00BE1FC1 /* EmployeesListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD62F47A2824E61C00BE1FC1 /* EmployeesListVC.xib */; };
+		DD62F47F2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F47D2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift */; };
+		DD62F4802824EB0F00BE1FC1 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD62F47E2824EB0F00BE1FC1 /* EmployeeTableViewCell.xib */; };
+		DD62F4882825219A00BE1FC1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F4872825219A00BE1FC1 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +58,15 @@
 		DD62F4192823B9C800BE1FC1 /* EmployeeDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD62F41D2823B9C800BE1FC1 /* EmployeeDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDBUITests.swift; sourceTree = "<group>"; };
 		DD62F41F2823B9C800BE1FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD62F46C2823CE6A00BE1FC1 /* AddEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeVC.swift; sourceTree = "<group>"; };
-		DD62F46D2823CE6A00BE1FC1 /* AddEmployeeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEmployeeVC.xib; sourceTree = "<group>"; };
+		DD62F46C2823CE6A00BE1FC1 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		DD62F46D2823CE6A00BE1FC1 /* EmployeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeViewController.xib; sourceTree = "<group>"; };
 		DD62F4722823D4BE00BE1FC1 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		DD62F4752823E30F00BE1FC1 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		DD62F4792824E61C00BE1FC1 /* EmployeesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListVC.swift; sourceTree = "<group>"; };
+		DD62F47A2824E61C00BE1FC1 /* EmployeesListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeesListVC.xib; sourceTree = "<group>"; };
+		DD62F47D2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		DD62F47E2824EB0F00BE1FC1 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTableViewCell.xib; sourceTree = "<group>"; };
+		DD62F4872825219A00BE1FC1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +117,13 @@
 		DD62F3F72823B9C300BE1FC1 /* EmployeeDB */ = {
 			isa = PBXGroup;
 			children = (
+				DD62F4862825218200BE1FC1 /* Extension */,
+				DD62F4742823E2ED00BE1FC1 /* Delegates */,
+				DD62F4772823E31C00BE1FC1 /* Database */,
 				DD62F4712823D4AA00BE1FC1 /* Model */,
-				DD62F3F82823B9C300BE1FC1 /* AppDelegate.swift */,
-				DD62F3FA2823B9C300BE1FC1 /* SceneDelegate.swift */,
 				DD62F46B2823CE0E00BE1FC1 /* HomeViewController */,
-				DD62F4702823CE7000BE1FC1 /* AddEmployee */,
+				DD62F4702823CE7000BE1FC1 /* EmployeeViewController */,
+				DD62F4782824E5E900BE1FC1 /* EmployeesList */,
 				DD62F46A2823CDFB00BE1FC1 /* Storyboards */,
 				DD62F4042823B9C700BE1FC1 /* Assets.xcassets */,
 				DD62F4092823B9C700BE1FC1 /* Info.plist */,
@@ -152,13 +166,13 @@
 			path = HomeViewController;
 			sourceTree = "<group>";
 		};
-		DD62F4702823CE7000BE1FC1 /* AddEmployee */ = {
+		DD62F4702823CE7000BE1FC1 /* EmployeeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DD62F46C2823CE6A00BE1FC1 /* AddEmployeeVC.swift */,
-				DD62F46D2823CE6A00BE1FC1 /* AddEmployeeVC.xib */,
+				DD62F46C2823CE6A00BE1FC1 /* EmployeeViewController.swift */,
+				DD62F46D2823CE6A00BE1FC1 /* EmployeeViewController.xib */,
 			);
-			path = AddEmployee;
+			path = EmployeeViewController;
 			sourceTree = "<group>";
 		};
 		DD62F4712823D4AA00BE1FC1 /* Model */ = {
@@ -167,6 +181,42 @@
 				DD62F4722823D4BE00BE1FC1 /* Employee.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD62F4742823E2ED00BE1FC1 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F3F82823B9C300BE1FC1 /* AppDelegate.swift */,
+				DD62F3FA2823B9C300BE1FC1 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		DD62F4772823E31C00BE1FC1 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F4752823E30F00BE1FC1 /* DBManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DD62F4782824E5E900BE1FC1 /* EmployeesList */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F4792824E61C00BE1FC1 /* EmployeesListVC.swift */,
+				DD62F47A2824E61C00BE1FC1 /* EmployeesListVC.xib */,
+				DD62F47D2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift */,
+				DD62F47E2824EB0F00BE1FC1 /* EmployeeTableViewCell.xib */,
+			);
+			path = EmployeesList;
+			sourceTree = "<group>";
+		};
+		DD62F4862825218200BE1FC1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F4872825219A00BE1FC1 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +322,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD62F46F2823CE6A00BE1FC1 /* AddEmployeeVC.xib in Resources */,
+				DD62F47C2824E61C00BE1FC1 /* EmployeesListVC.xib in Resources */,
+				DD62F46F2823CE6A00BE1FC1 /* EmployeeViewController.xib in Resources */,
 				DD62F4082823B9C700BE1FC1 /* LaunchScreen.storyboard in Resources */,
+				DD62F4802824EB0F00BE1FC1 /* EmployeeTableViewCell.xib in Resources */,
 				DD62F4052823B9C700BE1FC1 /* Assets.xcassets in Resources */,
 				DD62F4002823B9C300BE1FC1 /* Main.storyboard in Resources */,
 			);
@@ -300,9 +352,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD62F46E2823CE6A00BE1FC1 /* AddEmployeeVC.swift in Sources */,
+				DD62F46E2823CE6A00BE1FC1 /* EmployeeViewController.swift in Sources */,
+				DD62F47F2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift in Sources */,
+				DD62F4762823E30F00BE1FC1 /* DBManager.swift in Sources */,
 				DD62F3FD2823B9C300BE1FC1 /* HomeViewController.swift in Sources */,
+				DD62F4882825219A00BE1FC1 /* UIViewControllerExtension.swift in Sources */,
 				DD62F3F92823B9C300BE1FC1 /* AppDelegate.swift in Sources */,
+				DD62F47B2824E61C00BE1FC1 /* EmployeesListVC.swift in Sources */,
 				DD62F4732823D4BE00BE1FC1 /* Employee.swift in Sources */,
 				DD62F3FB2823B9C300BE1FC1 /* SceneDelegate.swift in Sources */,
 			);
@@ -481,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV7WPY575J;
 				INFOPLIST_FILE = EmployeeDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV7WPY575J;
 				INFOPLIST_FILE = EmployeeDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,6 +575,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV7WPY575J;
 				INFOPLIST_FILE = EmployeeDBTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -538,6 +597,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV7WPY575J;
 				INFOPLIST_FILE = EmployeeDBTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -558,6 +618,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV7WPY575J;
 				INFOPLIST_FILE = EmployeeDBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -577,6 +638,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV7WPY575J;
 				INFOPLIST_FILE = EmployeeDBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

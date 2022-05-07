@@ -17,19 +17,16 @@ class HomeViewController: UIViewController {
         setGradientBackground()
     }
 
-    @IBAction func viewEmployeeDetail(_ sender: Any) {
+    @IBAction func viewEmployees(_ sender: Any) {
+        let employeeListVC = EmployeesListVC(nibName: "EmployeesListVC", bundle: nil)
+        self.navigationController?.pushViewController(employeeListVC, animated: true)
     }
     
     @IBAction func addNewEmployee(_ sender: Any) {
-        let addNewEmployeeVC = AddEmployeeVC(nibName: "AddEmployeeVC", bundle: nil)
+        let addNewEmployeeVC = EmployeeViewController(nibName: "EmployeeViewController", bundle: nil)
+        addNewEmployeeVC.operation = .add
         self.navigationController?.pushViewController(addNewEmployeeVC, animated: true)
 
-    }
-    
-    @IBAction func updateEmployeeDetails(_ sender: Any) {
-    }
-    
-    @IBAction func removeEmployee(_ sender: Any) {
     }
     
     func setGradientBackground() {
