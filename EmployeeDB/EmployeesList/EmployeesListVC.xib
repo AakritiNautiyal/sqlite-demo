@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,6 +20,36 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xe5-Q1-82F">
+                    <rect key="frame" x="0.0" y="94" width="414" height="88"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FyP-oQ-6jE">
+                            <rect key="frame" x="0.0" y="40" width="414" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="roz-Ax-I0U"/>
+                            </constraints>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="wiE-ss-ZJq"/>
+                            </connections>
+                        </searchBar>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by technology :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wk-sD-MGX">
+                            <rect key="frame" x="10" y="14" width="161" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FyP-oQ-6jE" secondAttribute="bottom" constant="8" id="BLq-NR-X6C"/>
+                        <constraint firstItem="9Wk-sD-MGX" firstAttribute="top" secondItem="xe5-Q1-82F" secondAttribute="top" constant="14" id="L0B-af-3Z0"/>
+                        <constraint firstItem="FyP-oQ-6jE" firstAttribute="leading" secondItem="xe5-Q1-82F" secondAttribute="leading" id="NiR-VS-tcS"/>
+                        <constraint firstItem="FyP-oQ-6jE" firstAttribute="top" secondItem="9Wk-sD-MGX" secondAttribute="bottom" constant="8" id="Omn-fh-cSs"/>
+                        <constraint firstAttribute="trailing" secondItem="FyP-oQ-6jE" secondAttribute="trailing" id="hHu-Hw-CDe"/>
+                        <constraint firstItem="9Wk-sD-MGX" firstAttribute="leading" secondItem="xe5-Q1-82F" secondAttribute="leading" constant="10" id="pRj-hN-dqt"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4q-LZ-cqI" userLabel="HeaderView">
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <subviews>
@@ -53,14 +84,6 @@
                         <constraint firstItem="qlr-9V-bpP" firstAttribute="centerX" secondItem="E4q-LZ-cqI" secondAttribute="centerX" id="nMH-F9-AHb"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZG8-7p-Mh3">
-                    <rect key="frame" x="0.0" y="94" width="414" height="802"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="0rF-eU-SlW"/>
-                        <outlet property="delegate" destination="-1" id="d2U-CR-b1y"/>
-                    </connections>
-                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtI-xT-Ch4">
                     <rect key="frame" x="346" y="794.5" width="60" height="59"/>
                     <constraints>
@@ -73,6 +96,14 @@
                         <action selector="addNewEmployee:" destination="-1" eventType="touchUpInside" id="2MW-Bu-17j"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZG8-7p-Mh3">
+                    <rect key="frame" x="0.0" y="182" width="414" height="714"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0rF-eU-SlW"/>
+                        <outlet property="delegate" destination="-1" id="d2U-CR-b1y"/>
+                    </connections>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.76589639180000002" green="0.43918275979999999" blue="0.53022028840000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,16 +113,22 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jtI-xT-Ch4" secondAttribute="trailing" constant="8" id="JVL-X0-khe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E4q-LZ-cqI" secondAttribute="trailing" id="NEP-uK-9k4"/>
                 <constraint firstAttribute="bottom" secondItem="ZG8-7p-Mh3" secondAttribute="bottom" id="NSW-Fu-KXw"/>
-                <constraint firstItem="ZG8-7p-Mh3" firstAttribute="top" secondItem="E4q-LZ-cqI" secondAttribute="bottom" id="cf7-nj-uXP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xe5-Q1-82F" secondAttribute="trailing" id="R9x-EP-7Sl"/>
+                <constraint firstItem="ZG8-7p-Mh3" firstAttribute="top" secondItem="xe5-Q1-82F" secondAttribute="bottom" id="Xpx-kZ-bNw"/>
+                <constraint firstItem="xe5-Q1-82F" firstAttribute="top" secondItem="E4q-LZ-cqI" secondAttribute="bottom" id="bHk-QB-EZe"/>
+                <constraint firstItem="xe5-Q1-82F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bzW-Lc-Zqc"/>
                 <constraint firstItem="ZG8-7p-Mh3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="k27-w8-uzH"/>
                 <constraint firstItem="E4q-LZ-cqI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="n1h-OX-NPw"/>
                 <constraint firstItem="jtI-xT-Ch4" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-8" id="qmh-Qa-01X"/>
             </constraints>
-            <point key="canvasLocation" x="28" y="88"/>
+            <point key="canvasLocation" x="27.536231884057973" y="87.723214285714278"/>
         </view>
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

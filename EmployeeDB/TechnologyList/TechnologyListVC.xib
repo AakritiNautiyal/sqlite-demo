@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TechnologyListVC" customModule="EmployeeDB" customModuleProvider="target">
+            <connections>
+                <outlet property="techTableView" destination="5r5-VW-yfC" id="6MU-9E-5fQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5r5-VW-yfC">
+                    <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eT3-Tj-fVt"/>
+                        <outlet property="delegate" destination="-1" id="03I-WT-mEa"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T22-cp-eL9" userLabel="HeaderView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technologies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO7-8C-2xZ">
+                            <rect key="frame" x="152.5" y="14.5" width="109.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL7-6g-H9d">
+                            <rect key="frame" x="4" y="5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="4eg-xg-HXz"/>
+                                <constraint firstAttribute="width" secondItem="lL7-6g-H9d" secondAttribute="height" multiplier="1:1" id="Kwu-s8-2gS"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal">
+                                <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="medium"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="medium"/>
+                            </state>
+                            <connections>
+                                <action selector="navigateBack:" destination="-1" eventType="touchUpInside" id="9uc-2D-6eL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.76589639179568048" green="0.30472609027080944" blue="0.2606797991178087" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="dO7-8C-2xZ" firstAttribute="centerX" secondItem="T22-cp-eL9" secondAttribute="centerX" id="87B-Yi-Zt8"/>
+                        <constraint firstItem="lL7-6g-H9d" firstAttribute="leading" secondItem="T22-cp-eL9" secondAttribute="leading" constant="4" id="POI-ki-zYh"/>
+                        <constraint firstItem="dO7-8C-2xZ" firstAttribute="centerY" secondItem="T22-cp-eL9" secondAttribute="centerY" id="sYC-nf-c4E"/>
+                        <constraint firstAttribute="height" constant="50" id="uMO-16-ACI"/>
+                        <constraint firstItem="lL7-6g-H9d" firstAttribute="centerY" secondItem="T22-cp-eL9" secondAttribute="centerY" id="ula-ws-cmW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.76589639180000002" green="0.30472609029999997" blue="0.2606797991" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="T22-cp-eL9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="232-Pp-Leb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T22-cp-eL9" secondAttribute="trailing" id="2pT-2F-WEL"/>
+                <constraint firstItem="T22-cp-eL9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TvK-Td-f4c"/>
+                <constraint firstAttribute="bottom" secondItem="5r5-VW-yfC" secondAttribute="bottom" id="Yi3-2U-yRp"/>
+                <constraint firstItem="5r5-VW-yfC" firstAttribute="top" secondItem="T22-cp-eL9" secondAttribute="bottom" id="ZSq-hT-Ood"/>
+                <constraint firstItem="5r5-VW-yfC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h4f-Ze-cvq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5r5-VW-yfC" secondAttribute="trailing" id="hdN-ac-A1m"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

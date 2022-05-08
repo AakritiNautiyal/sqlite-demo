@@ -38,6 +38,8 @@ class EmployeeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
         let bar = UIToolbar()
         let doneBar = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTapped))
         bar.items = [doneBar]
@@ -86,6 +88,12 @@ class EmployeeViewController: UIViewController {
     
     @objc func doneTapped(){
         empTechnologyTextField.becomeFirstResponder()
+    }
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     //MARK:- Setup methods

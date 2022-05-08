@@ -183,4 +183,56 @@ class DBManager{
         }
         return false
     }
+    
+    
+    func getEmployeesForTechnology(_ technology:String) -> [Employee]?{
+        var employeesList = [Employee]()
+        
+        //creating a statement
+        var stmt: OpaquePointer?
+        
+        //the insert query
+        let queryString = "SELECT * FROM Employee WHERE technology = '\(technology)';"
+        
+        //preparing the query
+        if sqlite3_prepare_v2(db, queryString, -1, &stmt, nil) == SQLITE_OK{
+            
+            while sqlite3_step(stmt) == SQLITE_ROW{
+                let code = String(describing: String(cString: sqlite3_column_text(stmt, 0)))
+                let name = String(describing: String(cString: sqlite3_column_text(stmt, 1)))
+                let email = String(describing: String(cString: sqlite3_column_text(stmt, 2)))
+                let address = String(describing: String(cString: sqlite3_column_text(stmt, 3)))
+                let contact = String(describing: String(cString: sqlite3_column_text(stmt, 4)))
+                let technology = String(describing: String(cString: sqlite3_column_text(stmt, 5)))
+                let employee = Employee(code: code, name: name, email: email, address: address, contact: contact, technology: technology)
+                employeesList.append(employee)
+            }
+            return employeesList
+        } else {
+            print("fetching failed")
+        }
+        return nil
+    }
+    
+    func fetchTechnologies() -> [String]{
+        var technologies = [String]()
+        
+        //creating a statement
+        var stmt: OpaquePointer?
+        
+        //the insert query
+        let queryString = "SELECT DISTINCT technology FROM Employee;"
+        
+        //preparing the query
+        if sqlite3_prepare_v2(db, queryString, -1, &stmt, nil) == SQLITE_OK{
+            
+            while sqlite3_step(stmt) == SQLITE_ROW{
+                let technology = String(describing: String(cString: sqlite3_column_text(stmt, 0)))
+                technologies.append(technology)
+            }
+        } else {
+            print("fetching failed")
+        }
+        return technologies
+    }
 }

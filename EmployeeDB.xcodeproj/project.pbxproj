@@ -24,6 +24,12 @@
 		DD62F47F2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F47D2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift */; };
 		DD62F4802824EB0F00BE1FC1 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD62F47E2824EB0F00BE1FC1 /* EmployeeTableViewCell.xib */; };
 		DD62F4882825219A00BE1FC1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F4872825219A00BE1FC1 /* UIViewControllerExtension.swift */; };
+		DD6EA1F52827687500FAEE41 /* TechnologyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1F32827687500FAEE41 /* TechnologyListVC.swift */; };
+		DD6EA1F62827687500FAEE41 /* TechnologyListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6EA1F42827687500FAEE41 /* TechnologyListVC.xib */; };
+		DD6EA1F928276BE000FAEE41 /* TechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1F728276BE000FAEE41 /* TechTableViewCell.swift */; };
+		DD6EA1FA28276BE000FAEE41 /* TechTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6EA1F828276BE000FAEE41 /* TechTableViewCell.xib */; };
+		DD6EA1FE28276D5E00FAEE41 /* FindEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1FC28276D5E00FAEE41 /* FindEmployeeVC.swift */; };
+		DD6EA1FF28276D5E00FAEE41 /* FindEmployeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6EA1FD28276D5E00FAEE41 /* FindEmployeeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,12 @@
 		DD62F47D2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		DD62F47E2824EB0F00BE1FC1 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeTableViewCell.xib; sourceTree = "<group>"; };
 		DD62F4872825219A00BE1FC1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		DD6EA1F32827687500FAEE41 /* TechnologyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyListVC.swift; sourceTree = "<group>"; };
+		DD6EA1F42827687500FAEE41 /* TechnologyListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TechnologyListVC.xib; sourceTree = "<group>"; };
+		DD6EA1F728276BE000FAEE41 /* TechTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechTableViewCell.swift; sourceTree = "<group>"; };
+		DD6EA1F828276BE000FAEE41 /* TechTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TechTableViewCell.xib; sourceTree = "<group>"; };
+		DD6EA1FC28276D5E00FAEE41 /* FindEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindEmployeeVC.swift; sourceTree = "<group>"; };
+		DD6EA1FD28276D5E00FAEE41 /* FindEmployeeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindEmployeeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,8 @@
 				DD62F46B2823CE0E00BE1FC1 /* HomeViewController */,
 				DD62F4702823CE7000BE1FC1 /* EmployeeViewController */,
 				DD62F4782824E5E900BE1FC1 /* EmployeesList */,
+				DD6EA1FB28276CFF00FAEE41 /* FindEmployee */,
+				DD6EA1F22827684700FAEE41 /* TechnologyList */,
 				DD62F46A2823CDFB00BE1FC1 /* Storyboards */,
 				DD62F4042823B9C700BE1FC1 /* Assets.xcassets */,
 				DD62F4092823B9C700BE1FC1 /* Info.plist */,
@@ -217,6 +231,26 @@
 				DD62F4872825219A00BE1FC1 /* UIViewControllerExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DD6EA1F22827684700FAEE41 /* TechnologyList */ = {
+			isa = PBXGroup;
+			children = (
+				DD6EA1F32827687500FAEE41 /* TechnologyListVC.swift */,
+				DD6EA1F42827687500FAEE41 /* TechnologyListVC.xib */,
+				DD6EA1F728276BE000FAEE41 /* TechTableViewCell.swift */,
+				DD6EA1F828276BE000FAEE41 /* TechTableViewCell.xib */,
+			);
+			path = TechnologyList;
+			sourceTree = "<group>";
+		};
+		DD6EA1FB28276CFF00FAEE41 /* FindEmployee */ = {
+			isa = PBXGroup;
+			children = (
+				DD6EA1FC28276D5E00FAEE41 /* FindEmployeeVC.swift */,
+				DD6EA1FD28276D5E00FAEE41 /* FindEmployeeVC.xib */,
+			);
+			path = FindEmployee;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,10 +356,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6EA1F62827687500FAEE41 /* TechnologyListVC.xib in Resources */,
 				DD62F47C2824E61C00BE1FC1 /* EmployeesListVC.xib in Resources */,
 				DD62F46F2823CE6A00BE1FC1 /* EmployeeViewController.xib in Resources */,
 				DD62F4082823B9C700BE1FC1 /* LaunchScreen.storyboard in Resources */,
 				DD62F4802824EB0F00BE1FC1 /* EmployeeTableViewCell.xib in Resources */,
+				DD6EA1FF28276D5E00FAEE41 /* FindEmployeeVC.xib in Resources */,
+				DD6EA1FA28276BE000FAEE41 /* TechTableViewCell.xib in Resources */,
 				DD62F4052823B9C700BE1FC1 /* Assets.xcassets in Resources */,
 				DD62F4002823B9C300BE1FC1 /* Main.storyboard in Resources */,
 			);
@@ -353,11 +390,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD62F46E2823CE6A00BE1FC1 /* EmployeeViewController.swift in Sources */,
+				DD6EA1FE28276D5E00FAEE41 /* FindEmployeeVC.swift in Sources */,
 				DD62F47F2824EB0F00BE1FC1 /* EmployeeTableViewCell.swift in Sources */,
+				DD6EA1F52827687500FAEE41 /* TechnologyListVC.swift in Sources */,
 				DD62F4762823E30F00BE1FC1 /* DBManager.swift in Sources */,
 				DD62F3FD2823B9C300BE1FC1 /* HomeViewController.swift in Sources */,
 				DD62F4882825219A00BE1FC1 /* UIViewControllerExtension.swift in Sources */,
 				DD62F3F92823B9C300BE1FC1 /* AppDelegate.swift in Sources */,
+				DD6EA1F928276BE000FAEE41 /* TechTableViewCell.swift in Sources */,
 				DD62F47B2824E61C00BE1FC1 /* EmployeesListVC.swift in Sources */,
 				DD62F4732823D4BE00BE1FC1 /* Employee.swift in Sources */,
 				DD62F3FB2823B9C300BE1FC1 /* SceneDelegate.swift in Sources */,

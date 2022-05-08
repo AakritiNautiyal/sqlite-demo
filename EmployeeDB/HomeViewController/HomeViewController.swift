@@ -26,7 +26,17 @@ class HomeViewController: UIViewController {
         let addNewEmployeeVC = EmployeeViewController(nibName: "EmployeeViewController", bundle: nil)
         addNewEmployeeVC.operation = .add
         self.navigationController?.pushViewController(addNewEmployeeVC, animated: true)
-
+    }
+    
+    @IBAction func searchEmployee(_ sender: Any) {
+        let findEmployeeVC = FindEmployeeVC(nibName: "FindEmployeeVC", bundle: nil)
+        self.navigationController?.pushViewController(findEmployeeVC, animated: true)
+    }
+    
+    
+    @IBAction func viewTechnologies(_ sender: Any) {
+        let techListVC = TechnologyListVC(nibName: "TechnologyListVC", bundle: nil)
+        self.navigationController?.pushViewController(techListVC, animated: true)
     }
     
     func setGradientBackground() {

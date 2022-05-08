@@ -77,3 +77,25 @@ extension EmployeesListVC : UITableViewDataSource, UITableViewDelegate{
         
     }
 }
+
+
+extension EmployeesListVC: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchText = searchBar.text!
+        if let employees = DBManager.shared.getEmployeesForTechnology(searchText){
+            employeesList = employees
+            employeeTableView.reloadData()
+        } else {
+            showAlert(with: "Some error occurred")
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.count == 0{
+            fetchEmployees()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
+}
